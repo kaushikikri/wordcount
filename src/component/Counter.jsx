@@ -16,7 +16,7 @@ export const Counter = () => {
   function handleAll() {
     let val = textref.current.value;
     setChar(val);
-    val.length && setWord(val.trim().split(/[ -=]/).length);
+    val.length && setWord(val.trim().split(" ").length);
     val.length && setSen(val.trim().split(/[.?]/).length - 1);
     val.length && setPara(val.trim().split('\n').length);
   }
